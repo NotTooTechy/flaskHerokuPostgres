@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Please rate your service</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <img src="../static/logo.png" alt="Lexus" class="logo">
+      {% if message %}
+        <p class="message">{{message | safe}}</p>
+      {% endif %}
+      <!-- @todo -message -->
+      <form class="" action="/submit" method="post">
+        <div class="form-group">
+          <h3>Customer Name</h3>
+          <input type="text" name="customer" placeholder="Name of vehicle owner">
+        </div>
+
+        <div class="form-group">
+          <h3>Dealer</h3>
+          <select name="dealer">
+            <option value="">Select Dealer</option>
+            <option value="Kwai Leonard">Kwai Leonard</option>
+            <option value="Kevin Lowry">Kevin Lowery</option>
+            <option value="Spicy Kid">Spicy Kid</option>
+            <option value="Mark Gasol">Mark Gasol</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <h3>Please rate your dealer</h3>
+          <input type="radio" name="rating" value="1"> 1</input>
+          <input type="radio" name="rating" value="2"> 2</input>
+          <input type="radio" name="rating" value="3"> 3</input>
+          <input type="radio" name="rating" value="4"> 4</input>
+          <input type="radio" name="rating" value="5"> 5</input>
+          <input type="radio" name="rating" value="6"> 6</input>
+          <input type="radio" name="rating" value="7"> 7</input>
+          <input type="radio" name="rating" value="8"> 8</input>
+          <input type="radio" name="rating" value="9"> 9</input>
+          <input type="radio" name="rating" value="10" checked> 10</input>
+        </div>
+        <div class="form-group">
+          <h3>Comments about your experience</h3>
+          <textarea name="comments" rows="10" cols="30" placeholder="Tell us what you liked and/or did not like"></textarea>
+        </div>
+        <input type="submit" name="" value="Submit" class="btn">
+
+      </form>
+
+    </div>
+
+  </body>
+</html>
