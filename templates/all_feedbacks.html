@@ -1,0 +1,9 @@
+{% extends 'layout.html'%}
+{% block body %}
+	<h1>All feedbacks</h1>
+	<ul class="list-group">
+		{% for afeedback in feedbacks %}
+			<li class="list-group-item">{{afeedback.customer}}  <a href="all_feedbacks/{{afeedback.dealer}}"> {{afeedback.dealer}}</a>({{afeedback.rating}})  </li> 
+		{% endfor %}
+	</ul>
+{% endblock %}

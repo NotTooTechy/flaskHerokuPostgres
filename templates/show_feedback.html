@@ -1,0 +1,20 @@
+{% extends 'layout.html'%}
+{% block body %}
+	<table class="table">
+		<th col="col">Id</th>
+		<th col="col">Customer</th>
+		<th col="col">Dealer</th>
+		<th col="col">Rating</th>
+		<th col="col">Comments</th>
+		{% for feedback in feedbacks %}
+			<tr>
+					<td>{{feedback.id}}</td>
+					<td>{{feedback.customer}}</td>
+					<td>{{feedback.dealer}}</td>
+					<td>{{feedback.rating}}</td>
+					<td>{{feedback.comments}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}

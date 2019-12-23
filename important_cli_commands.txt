@@ -1,0 +1,12 @@
+ heroku --version
+ heroku login
+ heroku create lexfeedbackapp
+ heroku addons:create heroku-postgresql:hobby-dev --app lexfeedbackapp
+ heroku config --app lexfeedbackapp
+ heroku git:remote -a lexfeedbackapp
+ git push heroku master 
+ git push heroku master 
+ heroku open
+ heroku run python
+ heroku pg:psql --app lexfeedbackapp
+ heroku login
